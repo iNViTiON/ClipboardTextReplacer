@@ -95,19 +95,25 @@ public sealed class ClipboardNotification
         (string regex, string to)[] regexPairs = {
             /* 
              * Facebook
+             *   fbclid
              *   __cft__[0]
              *   __tn__
              *   hoisted_section_header_type
              *   sfnsn
+             *   notif_t
+             *   notif_id
+             *   notif_ref
+             *   ref
+             *   source
              * Twitter
              *   t
              *   s
              * Tiktok
              *   k
             */
-            ("&?(__cft__\\[0\\]|__tn__|hoisted_section_header_type|sfnsn|t|s|k)(=.+?)(&|$)", ""),
+            ("(?<=(\\?|&))(fbclid|__cft__\\[0\\]|__tn__|hoisted_section_header_type|sfnsn|notif_t|notif_id|notif_ref|ref|source|t|s|k)(=.+?)(&|$)", ""),
             // remove "?" if empty query param
-            ("\\?$", ""),
+            ("(\\?|&)$", ""),
         };
 
         public NotificationForm()
