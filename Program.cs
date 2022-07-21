@@ -114,6 +114,8 @@ public sealed class ClipboardNotification
             ("(?<=(\\?|&))(fbclid|__cft__\\[0\\]|__tn__|hoisted_section_header_type|sfnsn|notif_t|notif_id|notif_ref|ref|source|t|s|k)(=.+?)(&|$)", ""),
             // remove "?" if empty query param
             ("(\\?|&)$", ""),
+            // remove zero-width whitespace from SwiftKey
+            ("(​)", ""),
         };
 
         public NotificationForm()
