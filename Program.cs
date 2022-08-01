@@ -106,17 +106,32 @@ public sealed class ClipboardNotification
              *   ref
              *   source
              *   extid
+             * Lazada
+             *   clickTrackInfo
+             *   search
+             *   spm
+             * Shopee
+             *   smtt
+             *   sp_atk
+             *   xptdk
              * Twitter
              *   t
              *   s
              * Tiktok
              *   k
+             * general
+             *   utm_medium
+             *   utm_source
             */
-            ("(?<=(\\?|&))(fbclid|__cft__\\[0\\]|__tn__|hoisted_section_header_type|sfnsn|notif_t|notif_id|notif_ref|ref|source|extid|t|s|k)(=.+?)(&|$)", ""),
+            ("(?<=(\\?|&))(fbclid|__cft__\\[0\\]|__tn__|hoisted_section_header_type|sfnsn|notif_t|notif_id|notif_ref|ref|source|extid|clickTrackInfo|search|spm|smtt|sp_atk|xptdk|t|s|k|utm_source|utm_medium)(=.+?)(&|$)", ""),
             // remove "?" if empty query param
             ("(\\?|&)$", ""),
             // remove zero-width whitespace from SwiftKey
             ("(​)", ""),
+            // Lazada strip
+            ("(.+\\/\\/)(.*lazada.+?\\/)(.+?-)(i\\d+)(.+)(\\.html)", "$1$2$4$6"),
+            // Shopee strip
+            ("(.+\\/\\/)(.*shopee.+?\\/)(.+?-)(i\\.\\d+.\\d+)", "$1$2s-$4"),
         };
 
         public NotificationForm()
