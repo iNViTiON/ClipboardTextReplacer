@@ -4,7 +4,9 @@ Automatic replace text in clipboard with another text for Windows.
 
 e.g. copy `https://www.facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion` and get `https://www.facebook.com` in clipboard.
 
-Advance regex text replace can use to strip tracking query param from url. [query param list here](Program.cs#L96-L113)
+Advance regex text replace can use to strip tracking query param from url. [query param list here](Program.cs#L96-L125)
+
+Special replacer (e.g. Medium.com, Shopee, Lazada). [list here](Program.cs#L129-L136)
 
 ### Example
 
@@ -52,4 +54,13 @@ https://shopee.co.th/Microsoft-Surface-Slim-Pen-2(not-include-Slim-Pen-Charger)-
 to
 ```
 https://shopee.co.th/s-i.233973765.12374567450
+```
+
+#### Medium.com
+```
+https://medium.com/golfapipol-me/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B8%B8%E0%B8%84%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87-work-from-home-%E0%B8%88%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3-8213218057b8
+```
+to
+```
+https://medium.com/golfapipol-me/8213218057b8
 ```

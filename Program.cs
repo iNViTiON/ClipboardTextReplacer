@@ -132,6 +132,8 @@ public sealed class ClipboardNotification
             ("(.+\\/\\/)(.*lazada.+?\\/)(.+?-)(i\\d+)(.+)(\\.html)", "$1$2$4$6"),
             // Shopee strip
             ("(.+\\/\\/)(.*shopee.+?\\/)(.+?-)(i\\.\\d+.\\d+)", "$1$2s-$4"),
+            // Medium strip
+            ("(.+\\/\\/)(.*medium.com\\/)(.+?\\/)(.+-)([0-9a-f]+$)", "$1$2$3$5"),
         };
 
         public NotificationForm()
